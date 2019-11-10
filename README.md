@@ -1,5 +1,5 @@
-# Docker Base Image for Arch Linux ARM [![Build Status](https://travis-ci.org/archlinux/archlinux-docker.svg?branch=master)](https://travis-ci.org/archlinux/archlinux-docker)
-This repository contains all scripts and files needed to create a Docker base image for the Arch Linux distribution.
+# Docker Base Image for Arch Linux ARM [![Build Status](https://api.travis-ci.org/dontomage/archlinux-docker.svg?branch=master)](https://travis-ci.org/dontomage/archlinux-docker)
+This repository contains all scripts and files needed to create a Docker base image for the Arch Linux ARM distribution.
 ## Dependencies
 Install the following Arch Linux packages:
 * make
