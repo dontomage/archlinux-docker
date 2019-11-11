@@ -25,6 +25,7 @@ docker-image-test: docker-image
 	docker run --rm $(DOCKER_ORGANIZATION)/$(DOCKER_IMAGE) sh -c "/usr/bin/pacman -Syu --noconfirm grep && locale | grep -q UTF-8"
 
 ci-test:
+	docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 	docker run --rm --privileged --tmpfs=/tmp:exec --tmpfs=/run/shm -v /run/docker.sock:/run/docker.sock \
 		-v $(PWD):/app -w /app $(DOCKER_ORGANIZATION)/$(DOCKER_IMAGE) \
 		sh -c 'pacman -Syu --noconfirm make devtools docker && make docker-image-test'

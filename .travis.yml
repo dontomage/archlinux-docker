@@ -8,6 +8,4 @@ services:
 script:
   - make ci-test
 
-arch:
-  - arm64
 
